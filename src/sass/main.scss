@@ -18,6 +18,7 @@ h4 {
 
 body {
   color: $main-white;
+  font-size: 1.1rem;
 }
 
 // * ---- GLOBAL CLASSES -----
@@ -30,7 +31,7 @@ body {
   // box model
   width: 100vw;
   height: 100vh;
-  padding: (1rem 0);
+  padding: (1rem 2rem);
   // visuals
   display: grid;
   grid-template-rows: auto 1fr;
@@ -94,6 +95,18 @@ body {
       @extend .flexBox;
       flex-direction: column;
       grid-area: "forecast";
+
+      .weather-card {
+        // box model
+        width: 100%;
+        height: 4rem;
+        margin: 0.5rem;
+        border-radius: 0.25rem;
+        // visuals
+        @extend .flexBox;
+        justify-content: space-evenly;
+        background-color: rgba($color: $main-white, $alpha: 0.2);
+      }
     }
 
     // --- MAIN ---

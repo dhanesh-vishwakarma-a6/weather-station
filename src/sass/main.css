@@ -39,9 +39,10 @@ h4 {
 
 body {
   color: #fdfefe;
+  font-size: 1.1rem;
 }
 
-.flexBox, .app #weather #details, .app #weather #main, .app #weather #forecast, .app #header {
+.flexBox, .app #weather #details, .app #weather #main, .app #weather #forecast .weather-card, .app #weather #forecast, .app #header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +51,7 @@ body {
 .app {
   width: 100vw;
   height: 100vh;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-areas: "header" "weather";
@@ -92,6 +93,14 @@ body {
 .app #weather #forecast {
   flex-direction: column;
   grid-area: "forecast";
+}
+.app #weather #forecast .weather-card {
+  width: 100%;
+  height: 4rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  justify-content: space-evenly;
+  background-color: rgba(253, 254, 254, 0.2);
 }
 .app #weather #main {
   justify-content: flex-start;
