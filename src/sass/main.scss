@@ -76,6 +76,8 @@ body {
         background-color: $main-black;
         // typography
         font-size: 1.1rem;
+        // misc
+        cursor: pointer;
       }
     }
   }
@@ -111,10 +113,9 @@ body {
 
       .temperature {
         // box model
-
+        width: 18rem;
         height: 70%;
-        padding: 1rem 1rem 2rem;
-        margin-bottom: 1rem;
+        padding: 1rem;
         border-radius: 0.5rem;
         // visuals
         background-color: rgba($color: $main-white, $alpha: 0.2);

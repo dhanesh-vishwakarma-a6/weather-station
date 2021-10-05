@@ -78,6 +78,7 @@ body {
   color: #fdfefe;
   background-color: #17202a;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 .app #weather {
   display: grid;
@@ -100,9 +101,9 @@ body {
   padding-bottom: 1rem;
 }
 .app #weather #main .temperature {
+  width: 18rem;
   height: 70%;
-  padding: 1rem 1rem 2rem;
-  margin-bottom: 1rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   background-color: rgba(253, 254, 254, 0.2);
 }
