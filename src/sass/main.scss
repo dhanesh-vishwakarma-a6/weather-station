@@ -7,6 +7,19 @@
 @include global-reset;
 @include headings(3rem, 1, 3);
 
+h1,
+h2,
+h3,
+h4 {
+  padding: 0.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+body {
+  color: $main-white;
+}
+
 // * ---- GLOBAL CLASSES -----
 .flexBox {
   @include flex-box();
@@ -17,6 +30,7 @@
   // box model
   width: 100vw;
   height: 100vh;
+  padding: (1rem 0);
   // visuals
   display: grid;
   grid-template-rows: auto 1fr;
@@ -30,8 +44,40 @@
 
   // * ----- HEADER -----
   #header {
+    // visuals
     @extend .flexBox;
+    flex-direction: column;
     grid-area: "header";
+    // box model
+    margin-bottom: 1rem;
+    h1 {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0px;
+    }
+
+    form {
+      .search-bar {
+        // box model
+        padding: 0.25rem 0.5rem;
+        border: none;
+        border-radius: 0.25rem 0rem 0rem 0.25rem;
+        // typography
+        font-size: 1.1rem;
+      }
+
+      .search-btn {
+        // box model
+        padding: 0.25rem 0.5rem;
+        border: none;
+        border-radius: 0rem 0.25rem 0.25rem 0rem;
+        // visuals
+        color: $main-white;
+        background-color: $main-black;
+        // typography
+        font-size: 1.1rem;
+      }
+    }
   }
 
   // * ----- WEATHER -----

@@ -1,12 +1,12 @@
 import React from "react"
+import Header from "components/header";
+
 import "./sass/main.css"
 
 const App = () => {
   return (
     <div className="app">
-      <div id="header">
-
-      </div>
+      <Header />
     </div>
   );
 }
