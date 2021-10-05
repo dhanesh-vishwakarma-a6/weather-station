@@ -19,7 +19,10 @@ const App = () => {
         if (response.ok) return response.json()
         throw response
       })
-      .then(data => console.log(data))
+      .then(data => {
+        setWeather(data)
+        console.log(data)
+      })
       .catch(error => {
         console.error("Error fetching weather: ", error)
         setError(error)
@@ -32,7 +35,7 @@ const App = () => {
   return (
     <div className="app">
       <Header query={query} setQuery={setQuery} search={search} />
-      {weather === undefined ? <Weather /> : ""}
+      {weather !== undefined ? <Weather weather={weather} /> : ""}
     </div>
   );
 }
