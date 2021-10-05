@@ -9,9 +9,13 @@ const App = () => {
   const [weather, setWeather] = useState()
   const [loading, setLoading] = useState(false)
 
+  const search = () => {
+    console.log(query)
+  }
+
   return (
     <div className="app">
-      <Header />
+      <Header query={query} setQuery={setQuery} search={search} />
       {weather === undefined ? <Weather /> : ""}
     </div>
   );
