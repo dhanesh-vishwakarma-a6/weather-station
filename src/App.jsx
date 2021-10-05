@@ -1,9 +1,12 @@
 import React from "react"
+import "./sass/main.css"
 
 const App = () => {
   return (
     <div className="app">
-      <h1>Weather Station</h1>
+      <div id="header">
+
+      </div>
     </div>
   );
 }

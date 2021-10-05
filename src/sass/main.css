@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "raleway", Courier New, Courier;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.flexBox, .app #weather #details, .app #weather #main, .app #weather #forecast, .app #header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header" "weather";
+  gap: 1rem;
+  background: url("https://res.cloudinary.com/ddlvcqggy/image/upload/v1622180763/weather-app-react/bg/sunrise_hsaw4r.jpg");
+  background-attachment: fixed;
+}
+.app #header {
+  grid-area: "header";
+}
+.app #weather {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-area: "weather";
+}
+.app #weather #forecast {
+  flex-direction: column;
+  grid-area: "forecast";
+}
+.app #weather #main {
+  flex-direction: column;
+  grid-area: "main";
+}
+.app #weather #details {
+  flex-direction: column;
+  grid-area: "details";
+}
+
+/*# sourceMappingURL=main.css.map */
