@@ -26,7 +26,12 @@ const SearchBox = ({ query, setQuery, search }) => {
                 value={query}
             />
             {/* submit button */}
-            <button type="submit" className="search-btn">Search</button>
+            <button
+                type="submit"
+                className="search-btn"
+            >
+                Search
+            </button>
         </form>
     )
 }
