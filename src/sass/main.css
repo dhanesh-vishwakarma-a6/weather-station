@@ -42,7 +42,7 @@ body {
   font-size: 1.1rem;
 }
 
-.flexBox, .app #weather #details, .app #weather #main, .app #weather #forecast .weather-card, .app #weather #forecast, .app #header {
+.flexBox, .app #weather #details, .app #weather #main, .app #weather #forecast .weather-card .weather, .app #weather #forecast .weather-card, .app #weather #forecast, .app #header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +50,7 @@ body {
 
 .app {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 1rem 2rem;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -97,10 +97,18 @@ body {
 .app #weather #forecast .weather-card {
   width: 100%;
   height: 4rem;
+  padding: 0rem 1rem;
   margin: 0.5rem;
   border-radius: 0.25rem;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: rgba(253, 254, 254, 0.2);
+}
+.app #weather #forecast .weather-card .weather {
+  width: 15rem;
+  justify-content: space-between;
+}
+.app #weather #forecast .weather-card .weather .description {
+  font-size: 0.8rem;
 }
 .app #weather #main {
   justify-content: flex-start;

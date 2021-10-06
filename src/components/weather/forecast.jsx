@@ -1,20 +1,34 @@
 import React from "react"
+import moment from "moment"
 
-const Forecast = () => {
+const Forecast = ({ data }) => {
+    // console.log(data)
+    const weekdays = data.daily
     return (
         <div id="forecast">
-            <article className="weather-card">
-                <section className="date">Mon, Oct 5</section>
-                <section className="weather-icon">
-                    <img
-                        src={`https://openweathermap.org/img/wn/09d.png`}
-                        alt="weather-icon"
-                    />
-                </section>
-                <section className="temp-minmax">17/10 C</section>
-                <section className="description">moderate rain</section>
-            </article>
+            {weekdays.map((day, index) => {
+                const { dt, temp, weather } = day
+                return (
+                    <article key={index} className="weather-card">
+                        {/* date */}
+                        <section className="date">
+                            <span >{moment(dt * 1000).format("ddd")}, {moment(dt * 1000).format("MMM Do")}</span>
+                        </section>
 
+                        {/* weather */}
+                        <section className="weather">
+                            <span className="weather-icon">
+                                <img
+                                    src={`https://openweathermap.org/img/wn/${weather[0].icon}.png`}
+                                    alt="weather-icon"
+                                />
+                            </span>
+                            <span className="temp-maxmin">{Math.round(temp.max)}/{Math.round(temp.min)}&#8451;</span>
+                            <span className="description">{weather[0].description}</span>
+                        </section>
+                    </article>
+                )
+            })}
         </div>
     )
 }

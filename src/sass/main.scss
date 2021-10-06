@@ -30,7 +30,7 @@ body {
 .app {
   // box model
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: (1rem 2rem);
   // visuals
   display: grid;
@@ -100,12 +100,27 @@ body {
         // box model
         width: 100%;
         height: 4rem;
+        padding: 0rem 1rem;
         margin: 0.5rem;
         border-radius: 0.25rem;
         // visuals
         @extend .flexBox;
-        justify-content: space-evenly;
+        justify-content: space-between;
         background-color: rgba($color: $main-white, $alpha: 0.2);
+
+        .date {
+        }
+
+        .weather {
+          // box model
+          width: 15rem;
+          // visuals
+          @extend .flexBox;
+          justify-content: space-between;
+          .description {
+            font-size: 0.8rem;
+          }
+        }
       }
     }
 

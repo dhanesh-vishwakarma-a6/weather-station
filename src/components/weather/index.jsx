@@ -2,10 +2,10 @@ import React from "react"
 import Main from "./main"
 import Forecast from "./forecast"
 
-const Weather = ({ weather }) => {
+const Weather = ({ weather, forecast }) => {
     return (
         <div id="weather">
-            <Forecast />
+            <Forecast data={forecast} />
             <Main data={weather} />
         </div>
     )
