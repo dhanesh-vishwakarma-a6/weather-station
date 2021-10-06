@@ -118,6 +118,8 @@ body {
           @extend .flexBox;
           justify-content: space-between;
           .description {
+            width: 4rem;
+            font-style: italic;
             font-size: 0.8rem;
           }
         }
@@ -142,7 +144,7 @@ body {
       .temperature {
         // box model
         width: 18rem;
-        height: 70%;
+        height: 20rem;
         padding: 1rem;
         border-radius: 0.5rem;
         // visuals

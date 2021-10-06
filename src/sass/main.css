@@ -108,6 +108,8 @@ body {
   justify-content: space-between;
 }
 .app #weather #forecast .weather-card .weather .description {
+  width: 4rem;
+  font-style: italic;
   font-size: 0.8rem;
 }
 .app #weather #main {
@@ -122,7 +124,7 @@ body {
 }
 .app #weather #main .temperature {
   width: 18rem;
-  height: 70%;
+  height: 20rem;
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: rgba(253, 254, 254, 0.2);

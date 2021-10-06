@@ -18,8 +18,9 @@ const App = () => {
       let response = await API.getWeather(query)
       if (!response.ok) throw response
       let data = await response.json()
+      const { lon, lat } = data.coord
+      currentForecast(lon, lat)
       setWeather(data)
-      currentForecast(data.coord.lon, data.coord.lat)
     } catch (error) {
       console.error("Error in fetching current weather: ", error)
     } finally {
@@ -52,7 +53,7 @@ const App = () => {
   return (
     <div className="app">
       <Header query={query} setQuery={setQuery} search={search} />
-      {weather !== undefined ? <Weather weather={weather} forecast={forecast} /> : ""}
+      {weather && forecast !== undefined ? <Weather weather={weather} forecast={forecast} /> : ""}
     </div>
   );
 }
