@@ -16,7 +16,7 @@ const Forecast = ({ data }) => {
                         </section>
 
                         {/* weather */}
-                        <section className="weather">
+                        <section className="weather-info">
                             <span className="weather-icon">
                                 <img
                                     src={`https://openweathermap.org/img/wn/${weather[0].icon}.png`}
