@@ -8,8 +8,8 @@ export const API = {
         return fetch(`${base}weather?q=${query}&units=${units}&appid=${key}`)
     },
 
-    // 7 day forecast
-    getForecast: (lon, lat, units = "metric", part = "current,minutely,hourly,alerts") => {
+    // forecast
+    getForecast: (lon, lat, units = "metric", part = "current,minutely,alerts") => {
         return fetch(`${base}onecall?lat=${lat}&lon=${lon}&exclude=${part}&units=${units}&appid=${key}`)
     }
 }

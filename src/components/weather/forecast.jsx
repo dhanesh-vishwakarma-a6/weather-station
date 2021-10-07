@@ -1,12 +1,11 @@
 import React from "react"
 import moment from "moment"
 
-const Forecast = ({ data }) => {
-    // console.log(data)
-    const weekdays = data.daily
+const Forecast = ({ data: daily }) => {
     return (
         <div id="forecast">
-            {weekdays.map((day, index) => {
+            <h3>8-day forecast</h3>
+            {daily.map((day, index) => {
                 const { dt, temp, weather } = day
                 return (
                     <article key={index} className="weather-card">
