@@ -190,4 +190,17 @@ body {
     flex-direction: column;
     grid-area: graph;
   }
+
+  // * --- DETAILS ---
+  #details {
+    grid-area: details;
+    font-size: 1.5rem;
+    .weather-icon {
+      margin: 0.5rem;
+    }
+
+    .sunrise-sunset {
+      display: flex;
+    }
+  }
 }

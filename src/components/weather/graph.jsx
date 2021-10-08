@@ -21,6 +21,12 @@ const Graph = ({ data: hourly }) => {
     };
 
     const options = {
+        maintainAspectRatio: false,
+        responsive: true,
+        animation: {
+            duration: 100
+        },
+
         elements: {
             point: {
                 radius: 0

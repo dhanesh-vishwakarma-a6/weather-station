@@ -144,5 +144,15 @@ body {
   flex-direction: column;
   grid-area: graph;
 }
+.app #details {
+  grid-area: details;
+  font-size: 1.5rem;
+}
+.app #details .weather-icon {
+  margin: 0.5rem;
+}
+.app #details .sunrise-sunset {
+  display: flex;
+}
 
 /*# sourceMappingURL=main.css.map */
