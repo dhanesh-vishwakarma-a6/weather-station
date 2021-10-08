@@ -7,11 +7,11 @@ const Weather = ({ weather, forecast }) => {
     const { daily, hourly } = forecast
 
     return (
-        <div id="weather">
+        <>
             <Forecast data={daily} />
             <Main data={weather} />
             <Graph data={hourly} />
-        </div>
+        </>
     )
 }
 
