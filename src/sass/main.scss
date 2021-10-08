@@ -108,9 +108,22 @@ body {
 
     // --- FORECAST ---
     #forecast {
+      // box model
+      width: 100%;
+      height: 70vh;
+      // visuals
       @extend .flexBox;
+      justify-content: flex-start;
       flex-direction: column;
       grid-area: "forecast";
+      // misc
+      overflow: scroll;
+      -ms-overflow-style: scroll; // IE and Edge
+      scrollbar-width: scroll; // Firefox
+      // hides the scroll bar but keeps the functionality
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       .weather-card {
         // box model

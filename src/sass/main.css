@@ -92,8 +92,17 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .app #weather #forecast {
+  width: 100%;
+  height: 70vh;
+  justify-content: flex-start;
   flex-direction: column;
   grid-area: "forecast";
+  overflow: scroll;
+  -ms-overflow-style: scroll;
+  scrollbar-width: scroll;
+}
+.app #weather #forecast::-webkit-scrollbar {
+  display: none;
 }
 .app #weather #forecast .weather-card {
   width: 100%;
@@ -139,7 +148,7 @@ body {
   width: 100%;
   justify-content: flex-start;
   flex-direction: column;
-  grid-area: "details";
+  grid-area: "graph";
 }
 
 /*# sourceMappingURL=main.css.map */
