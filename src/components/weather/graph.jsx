@@ -24,7 +24,7 @@ const Graph = ({ data: hourly }) => {
         maintainAspectRatio: false,
         responsive: true,
         animation: {
-            duration: 100
+            duration: 1000
         },
 
         elements: {
@@ -36,7 +36,6 @@ const Graph = ({ data: hourly }) => {
 
     return (
         <div id="graph">
-            {/* <h3>Hourly forecast</h3> */}
             <Line data={state} options={options} />
         </div>
     )

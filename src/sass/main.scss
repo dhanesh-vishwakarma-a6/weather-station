@@ -108,6 +108,8 @@ body {
     justify-content: flex-start;
     flex-direction: column;
     grid-area: forecast;
+    // typography
+    text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.4);
     // misc
     overflow: scroll;
     -ms-overflow-style: scroll; // IE and Edge
@@ -129,16 +131,12 @@ body {
       justify-content: space-between;
       background-color: rgba($color: $main-white, $alpha: 0.2);
 
-      .date {
-      }
-
       .weather-info {
         width: 60%;
         // visuals
         @extend .flexBox;
         justify-content: flex-end;
-        .weather-icon {
-        }
+
         .description {
           width: 4rem;
           margin-left: 1rem;
@@ -174,8 +172,10 @@ body {
       // visuals
       background-color: rgba($color: $main-white, $alpha: 0.2);
       .temp {
-        font-size: 5rem;
         margin-bottom: 1rem;
+        font-size: 5rem;
+        text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.4),
+          3px 3px 8px rgba($color: #000000, $alpha: 0.4);
       }
     }
   }
@@ -184,23 +184,11 @@ body {
   #graph {
     // box model
     width: 100%;
+    height: 70vh;
     // visuals
     @extend .flexBox;
     justify-content: flex-start;
     flex-direction: column;
     grid-area: graph;
-  }
-
-  // * --- DETAILS ---
-  #details {
-    grid-area: details;
-    font-size: 1.5rem;
-    .weather-icon {
-      margin: 0.5rem;
-    }
-
-    .sunrise-sunset {
-      display: flex;
-    }
   }
 }

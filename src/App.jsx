@@ -19,7 +19,7 @@ const App = () => {
       if (!response.ok) throw response
       let data = await response.json()
       const { lon, lat } = data.coord
-      currentForecast(lon, lat)
+      await currentForecast(lon, lat)
       setWeather(data)
     } catch (error) {
       console.error("Error in fetching current weather: ", error)

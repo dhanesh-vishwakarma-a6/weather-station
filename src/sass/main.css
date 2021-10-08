@@ -90,6 +90,7 @@ body {
   justify-content: flex-start;
   flex-direction: column;
   grid-area: forecast;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   overflow: scroll;
   -ms-overflow-style: scroll;
   scrollbar-width: scroll;
@@ -135,24 +136,16 @@ body {
   background-color: rgba(253, 254, 254, 0.2);
 }
 .app #main .temperature .temp {
-  font-size: 5rem;
   margin-bottom: 1rem;
+  font-size: 5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 3px 3px 8px rgba(0, 0, 0, 0.4);
 }
 .app #graph {
   width: 100%;
+  height: 70vh;
   justify-content: flex-start;
   flex-direction: column;
   grid-area: graph;
-}
-.app #details {
-  grid-area: details;
-  font-size: 1.5rem;
-}
-.app #details .weather-icon {
-  margin: 0.5rem;
-}
-.app #details .sunrise-sunset {
-  display: flex;
 }
 
 /*# sourceMappingURL=main.css.map */
