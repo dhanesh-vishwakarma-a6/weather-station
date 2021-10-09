@@ -100,48 +100,54 @@ body {
 
   // * --- FORECAST ---
   #forecast {
+    // visuals
+    grid-area: forecast;
     // box model
     width: 100%;
-    height: 70vh;
-    // visuals
-    @extend .flexBox;
-    justify-content: flex-start;
-    flex-direction: column;
-    grid-area: forecast;
+    height: 60vh;
     // typography
     text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.4);
-    // misc
-    overflow: scroll;
-    -ms-overflow-style: scroll; // IE and Edge
-    scrollbar-width: scroll; // Firefox
-    // hides the scroll bar but keeps the functionality
-    &::-webkit-scrollbar {
-      display: none;
-    }
 
-    .weather-card {
+    .card-container {
       // box model
       width: 100%;
-      height: 4rem;
-      padding: 0rem 1rem;
-      margin: 0.5rem;
-      border-radius: 0.25rem;
-      // visuals
+      height: 100%;
       @extend .flexBox;
-      justify-content: space-between;
-      background-color: rgba($color: $main-white, $alpha: 0.2);
+      justify-content: flex-start;
+      flex-direction: column;
+      // misc
+      overflow: scroll;
+      -ms-overflow-style: scroll; // IE and Edge
+      scrollbar-width: scroll; // Firefox
+      // hides the scroll bar but keeps the functionality
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
-      .weather-info {
-        width: 60%;
+      .weather-card {
+        // box model
+        width: 100%;
+        height: 4rem;
+        padding: 0rem 1rem;
+        margin: 0.5rem;
+        border-radius: 0.25rem;
         // visuals
         @extend .flexBox;
-        justify-content: flex-end;
+        justify-content: space-between;
+        background-color: rgba($color: $main-white, $alpha: 0.2);
 
-        .description {
-          width: 4rem;
-          margin-left: 1rem;
-          font-style: italic;
-          font-size: 0.8rem;
+        .weather-info {
+          width: 60%;
+          // visuals
+          @extend .flexBox;
+          justify-content: flex-end;
+
+          .description {
+            width: 4rem;
+            margin-left: 1rem;
+            font-style: italic;
+            font-size: 0.8rem;
+          }
         }
       }
     }

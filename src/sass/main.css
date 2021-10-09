@@ -43,7 +43,7 @@ body {
   font-size: 1.1rem;
 }
 
-.flexBox, .app #graph, .app #main, .app #forecast .weather-card .weather-info, .app #forecast .weather-card, .app #forecast, .app #header {
+.flexBox, .app #graph, .app #main, .app #forecast .card-container .weather-card .weather-info, .app #forecast .card-container .weather-card, .app #forecast .card-container, .app #header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,20 +83,24 @@ body {
   cursor: pointer;
 }
 .app #forecast {
+  grid-area: forecast;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.app #forecast .card-container {
+  width: 100%;
+  height: 100%;
   justify-content: flex-start;
   flex-direction: column;
-  grid-area: forecast;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   overflow: scroll;
   -ms-overflow-style: scroll;
   scrollbar-width: scroll;
 }
-.app #forecast::-webkit-scrollbar {
+.app #forecast .card-container::-webkit-scrollbar {
   display: none;
 }
-.app #forecast .weather-card {
+.app #forecast .card-container .weather-card {
   width: 100%;
   height: 4rem;
   padding: 0rem 1rem;
@@ -105,11 +109,11 @@ body {
   justify-content: space-between;
   background-color: rgba(253, 254, 254, 0.2);
 }
-.app #forecast .weather-card .weather-info {
+.app #forecast .card-container .weather-card .weather-info {
   width: 60%;
   justify-content: flex-end;
 }
-.app #forecast .weather-card .weather-info .description {
+.app #forecast .card-container .weather-card .weather-info .description {
   width: 4rem;
   margin-left: 1rem;
   font-style: italic;
