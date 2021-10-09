@@ -9,7 +9,7 @@ const Graph = ({ data: hourly }) => {
         labels: graphData.time,
         datasets: [
             {
-                label: "Hourly Forecast",
+                label: "Hourly Forecast (48 hrs)",
                 fill: true,
                 lineTension: 0.5,
                 backgroundColor: "rgba(255,255,255,0.2)",

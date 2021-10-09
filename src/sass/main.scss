@@ -44,8 +44,7 @@ body {
   display: grid;
   grid-template-rows: auto auto 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 0.5rem;
-  column-gap: 0.5rem;
+  gap: 0.5rem;
   grid-template-areas:
     "header header header"
     "status status status"
@@ -247,5 +246,81 @@ body {
   }
   100% {
     opacity: 0;
+  }
+}
+
+// * ----- MEDIA QUERIES -----
+
+// * --- SMALL ---
+@include breakpoint(small) {
+  // --- GLOBAL STYLES ---
+  h1,
+  h2,
+  h3,
+  h4 {
+    padding: 0.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    letter-spacing: 0px;
+  }
+
+  @include headings(2rem, 600, 2, 3, 0.5rem);
+
+  body {
+    color: $main-white;
+    font-size: 1.1rem;
+  }
+
+  // --- GLOBAL CLASSES ---
+  .FlexBox {
+    @include flex-box();
+  }
+
+  // --- APP ---
+  .app {
+    // box model
+    width: 100vw;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    // visuals
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: none;
+    gap: 1rem;
+    grid-template-areas:
+      "header"
+      "status"
+      "main"
+      "info"
+      "graph"
+      "forecast";
+
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    // ---INFO ---
+    #info {
+      // box model
+      padding: 1rem;
+      margin: auto;
+      margin-bottom: 1rem;
+      border: none;
+    }
+
+    #graph {
+      height: 30vh;
+      margin-bottom: 1rem;
+    }
+
+    #forecast {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 1rem;
+    }
   }
 }

@@ -56,8 +56,7 @@ body {
   display: grid;
   grid-template-rows: auto auto 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 0.5rem;
-  column-gap: 0.5rem;
+  gap: 0.5rem;
   grid-template-areas: "header header header" "status status status" "forecast main graph" "forecast main info";
   background: url("https://res.cloudinary.com/ddlvcqggy/image/upload/v1622180763/weather-app-react/bg/sunrise_hsaw4r.jpg");
   background-attachment: fixed;
@@ -256,6 +255,71 @@ body {
   }
   100% {
     opacity: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  h1,
+h2,
+h3,
+h4 {
+    padding: 0.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    letter-spacing: 0px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  body {
+    color: #fdfefe;
+    font-size: 1.1rem;
+  }
+
+  .FlexBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: none;
+    gap: 1rem;
+    grid-template-areas: "header" "status" "main" "info" "graph" "forecast";
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+  .app #info {
+    padding: 1rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    border: none;
+  }
+  .app #graph {
+    height: 30vh;
+    margin-bottom: 1rem;
+  }
+  .app #forecast {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
   }
 }
 
