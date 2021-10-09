@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Loader from "components/loader"
 import Header from "components/header";
 import Weather from "components/weather";
 import { API } from "api";
@@ -48,12 +49,16 @@ const App = () => {
     currentWeather(query)
   }
 
-  if (loading) return <div>Loading...</div>
+  // if (loading) return <Loader />
 
   return (
     <div className="app">
       <Header query={query} setQuery={setQuery} search={search} />
-      {weather && forecast !== undefined ? <Weather weather={weather} forecast={forecast} /> : ""}
+      {loading ? (
+        <Loader />
+      ) : (
+        weather && forecast !== undefined ? <Weather weather={weather} forecast={forecast} /> : ""
+      )}
     </div>
   );
 }
