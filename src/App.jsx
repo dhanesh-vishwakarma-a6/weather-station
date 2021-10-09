@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import React, { lazy, Suspense, useState } from "react"
 import Loader from "components/loader"
 import Header from "components/header";
-import Weather from "components/weather";
 import { API } from "api";
-
 import "./sass/main.css"
+
+const Weather = lazy(() => import("components/weather"))
 
 const App = () => {
   const [query, setQuery] = useState("")
@@ -57,8 +57,11 @@ const App = () => {
       {loading ? (
         <Loader />
       ) : (
+        // Weather components
         weather && forecast !== undefined ? (
-          <Weather weather={weather} forecast={forecast} />
+          <Suspense fallback={<Loader />}>
+            <Weather weather={weather} forecast={forecast} />
+          </Suspense>
         ) : (
           ""
         )
