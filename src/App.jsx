@@ -57,7 +57,11 @@ const App = () => {
       {loading ? (
         <Loader />
       ) : (
-        weather && forecast !== undefined ? <Weather weather={weather} forecast={forecast} /> : ""
+        weather && forecast !== undefined ? (
+          <Weather weather={weather} forecast={forecast} />
+        ) : (
+          ""
+        )
       )}
     </div>
   );
