@@ -43,6 +43,10 @@ body {
   font-size: 1.1rem;
 }
 
+body:not(.app #header, .temp) {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 .flexBox, .app #graph, .app #main, .app #forecast .card-container .weather-card .weather-info, .app #forecast .card-container .weather-card, .app #forecast .card-container, .app #header {
   display: flex;
   justify-content: center;
@@ -65,6 +69,7 @@ body {
   flex-direction: column;
   grid-area: header;
   margin-bottom: 1rem;
+  text-shadow: none;
 }
 .app #header form .search-bar {
   padding: 0.5rem 1rem;
@@ -86,7 +91,6 @@ body {
   width: 100%;
   height: 60vh;
   margin-top: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .app #forecast .card-container {
   width: 100%;
@@ -124,7 +128,6 @@ body {
   flex-direction: column;
   grid-area: main;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .app #main .location {
   padding-bottom: 1rem;
@@ -257,7 +260,7 @@ body {
     opacity: 0;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 480px) {
   h1,
 h2,
 h3,
@@ -288,18 +291,12 @@ h4 {
     font-size: 1.1rem;
   }
 
-  .FlexBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .app {
     width: 100vw;
     min-height: 100vh;
     padding: 2rem 1rem;
     display: grid;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: 15vh auto auto auto auto;
     grid-template-columns: none;
     gap: 1rem;
     grid-template-areas: "header" "status" "main" "info" "graph" "forecast";
@@ -317,8 +314,9 @@ h4 {
     margin-bottom: 1rem;
   }
   .app #forecast {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
+    margin: auto;
     margin-bottom: 1rem;
   }
 }
