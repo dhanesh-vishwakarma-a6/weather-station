@@ -65,6 +65,7 @@ body:not(.app #header, .temp) {
     flex-direction: column;
     grid-area: header;
     // box model
+    height: 18vh;
     margin-bottom: 1rem;
     // typography
     text-shadow: none;
